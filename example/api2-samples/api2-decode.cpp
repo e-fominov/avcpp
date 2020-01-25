@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 
     string uri {argv[1]};
 
-    ssize_t      videoStream = -1;
+    size_t      videoStream;
     VideoDecoderContext vdec;
     Stream      vst;
     error_code   ec;

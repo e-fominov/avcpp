@@ -25,9 +25,9 @@ set(PLATFORM_LIBS
     ${FFMPEG_LIBRARIES})
 
 if(WIN32)
-  target_link_libraries(${AV_TARGET} ws2_32)
-  target_link_libraries(${AV_TARGET}_static ws2_32)
-  list(APPEND PLATFORM_LIBS ws2_32)
+  target_link_libraries(${AV_TARGET} ws2_32 Strmiids shlwapi Vfw32 GlU32 Secur32 ws2_32 Bcrypt)
+  target_link_libraries(${AV_TARGET}_static ws2_32 Strmiids shlwapi Vfw32 GlU32 Secur32 ws2_32 Bcrypt)
+  list(APPEND PLATFORM_LIBS ws2_32 Strmiids shlwapi Vfw32 GlU32 Secur32 ws2_32 Bcrypt)
 endif()
 
 target_include_directories(${AV_TARGET}
